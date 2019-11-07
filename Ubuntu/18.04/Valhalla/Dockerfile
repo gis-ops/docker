@@ -28,7 +28,7 @@ RUN apt-get install -y wget curl ca-certificates gnupg2 git parallel
 RUN apt-get install -y libczmq-dev libzmq5
 
 # Valhalla deps
-RUN apt-get install -y spatialite-bin unzip libtool zlib1g-dev libsqlite3-mod-spatialite jq libgeos-dev libgeos++-dev libprotobuf-dev protobuf-compiler libboost-all-dev libsqlite3-dev libspatialite-dev  liblua5.2-dev
+RUN apt-get install -y spatialite-bin unzip libtool zlib1g-dev libsqlite3-mod-spatialite jq libgeos-dev libgeos++-dev libprotobuf-dev protobuf-compiler libboost-all-dev libsqlite3-dev libspatialite-dev  liblua5.3-dev lua5.3
 
 # set paths to fix the libspatialite error
 RUN ln -s /usr/lib/x86_64-linux-gnu/mod_spatialite.so /usr/lib/mod_spatialite
