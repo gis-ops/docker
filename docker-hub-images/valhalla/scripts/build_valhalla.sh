@@ -3,16 +3,15 @@
 url="https://github.com/valhalla/valhalla"
 NPROC=$(nproc)
 
-
 git clone $url valhalla_git
 cd valhalla_git
 git fetch --tags
-git checkout $1
+git checkout "${1}"
 git submodule sync
 git submodule update --init --recursive
 curl -o- curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 export NVM_DIR="$HOME/.nvm"
-[[ -s "$NVM_DIR/nvm.sh" ]] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[[ -s "$NVM_DIR/nvm.sh" ]] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 nvm install 10.15.0 && nvm use 10.15.0
 npm install --ignore-scripts --unsafe-perm=true
 ln -s ~/.nvm/versions/node/v10.15.0/include/node/node.h /usr/include/node.h
@@ -32,6 +31,6 @@ cmake -H. -Bbuild \
   -DENABLE_SERVICES=On \
   -DENABLE_HTTP=On
 cd build
-make -j$NPROC
-make -j$NPROC check
+make -j"$NPROC"
+make -j"$NPROC" check
 make install
