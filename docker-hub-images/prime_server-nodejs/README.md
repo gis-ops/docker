@@ -1,8 +1,8 @@
 Base dockerfile for the gis-ops dockerhub prime_server image
 
-Build command for a specific version:
+Build nodejs together with the latest prime_server version from gisops docker hub:
 ```bash
-docker build --build-arg version=xxx -t gisops/prime_server-nodejs10.15.0:xxx .
+docker build -t gisops/prime_server-nodejs:xxx-10.15.0 .
 ```
 
 Build command for the latest version:
