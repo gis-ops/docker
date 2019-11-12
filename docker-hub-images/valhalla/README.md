@@ -68,7 +68,7 @@ This image respects the following custom environment variables to be passed duri
 - `min_y`: Minimum latitude for elevation tiles, in decimal WGS84, e.g. 18.5
 - `max_x`: Maximum longitude for elevation tiles, in decimal WGS84, e.g. 18.5
 - `max_y`: Maximum latitude for elevation tiles, in decimal WGS84, e.g. 18.5
-- `use_tiles_only`: ??
+- `use_tiles_ignore_pbf`: Uses a local tile.tar file and skips building, as long as the hash of the tile.tar is in the local hash file.
 - `force_rebuild`: Force a complete rebuild of the PBF files. Only skipping elevation.
 - `force_rebuild_elevation`: Force a rebuild of the elevation data as well.
 - `build_elevation`: General switch to build with elevation support.

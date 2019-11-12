@@ -17,7 +17,7 @@ services:
       - min_y=38 # -> Albania | -90  -> World
       - max_x=22 # -> Albania |  180 -> World
       - max_y=43 # -> Albania |  90  -> World
-      - use_tiles_only=True
+      - use_tiles_ignore_pbf=True
       - force_rebuild=False
       - force_rebuild_elevation=False
       - build_elevation=True
