@@ -2,7 +2,6 @@ version: '3.0'
 services:
   valhalla:
     image: gisops/valhalla:3.0.8
-    entrypoint: "/valhalla/scripts/run.sh"
     ports:
       - "8002:8002"
     volumes:
