@@ -57,3 +57,4 @@ COPY scripts/configure_valhalla.sh ${SCRIPTS_DIR}
 
 # Expose the necessary port
 EXPOSE 8002
+ENTRYPOINT ["/bin/bash", "/valhalla/scripts/run.sh"]
