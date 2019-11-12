@@ -49,7 +49,7 @@ wget http://download.geofabrik.de/europe/faroe-islands-latest.osm.pbf http://dow
 docker restart valhalla_1
 ```
 
-If you every change the PBF files by either adding new ones or deleting any, Valhalla will build new tiles on the next restart.
+If you change the PBF files by either adding new ones or deleting any, Valhalla will build new tiles on the next restart.
 
 #### Customize Valhalla configuration
 
